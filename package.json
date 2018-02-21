@@ -1,0 +1,50 @@
+{
+  "name": "7.7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npm-run-all watch:* ",
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch:browsersync": "browser-sync start --server --files css/*.css *.html",
+    "build": "npm run build:clean && npm run build:sass && npm run build:autoprefixer && npm run test",
+    "build:clean": "rimraf css/*.css",
+    "build:css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:sass:dev": "node-sass --output-style expanded --source-map true -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "test": "npm-run-all test:*",
+    "test:html": "globstar nu-html-checker *.html",
+    "init-project": "npm-run-all init:*",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "init:npm-install": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radko79/golden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radko79/golden/issues"
+  },
+  "homepage": "https://github.com/radko79/golden#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "autoprefixer-cli": "^1.0.0",
+    "glob-run": "^0.1.6",
+    "globstar": "^1.0.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2"
+  }
+}
