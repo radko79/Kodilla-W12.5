@@ -30,7 +30,10 @@ function createTweet(input) {
 	var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
 
 	if (tweetText.length > 140) {
-		getQuote();
+		// getQuote();
+		$('.tweetMe').on('click',function() {
+			$(this).prop("disabled",true);
+		});
 	} else {
 		var tweet = tweetLink + encodeURIComponent(tweetText);
 		$('.quote').text(quoteText);
