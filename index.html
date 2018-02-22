@@ -12,23 +12,35 @@
 		<!--Import brand new Font Awesome v5-->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		<!--Acknowledge browser that we are using jQuery library-->
-		<script src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	</head>
-	<body class="grey lighten-2">
+	<body class="blue darken-1">
 		<main>
-			<div class="container center-align">
+			<div class="container center-align white-text">
 				<header>
-					<h4>Random quote machine</h4>
+					<h4 class="flow-text white-text">Quote randomizer</4>
 				</header>
-				<div class="box">
-					<h2 class="quote"></h2>
-					<h3 class="author"></h3>
+				<div class="box row">
+					<div class="section">
+						<h5 class="quote flow-text"></h5>
+						<h6 class="author flow-text"></h6>
+					</div>
 				</div>
 				<div class="row">
-					<button class="trigger waves-effect waves-light btn-flat indigo darken-4 white-text btn-large"> Random quote </button>
+					<div class="section">
+						<button class="trigger waves-effect waves-light btn blue darken-1 white-text btn-large"> Random quote </button>
+					</div>
 				</div>
 				<div class="row">
-					<a href="#" target="_blank" class="tweet"><i class="fab fa-twitter fa-3x"></i>Tweet</a>
+					<div class="section">
+						<div class="col s4"></div>
+						<div class="col s4 blue darken-1 center-align  border">
+							<button class="trigger waves-effect waves-light btn blue darken-1 white-text btn-large">
+								<a href="#" target="_blank" class="tweet white-text"><i class="fontAwesome fab fa-twitter fa-2x white-text"></i>Tweet</a>
+							</button>
+						</div>
+						<div class="col s4 offset-s4"></div>
+					</div>
 				</div>
 			</div>
 		</main>
