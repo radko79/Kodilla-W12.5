@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Random joke about Chuck Norris</title>
+		<title>Random quote</title>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
@@ -9,16 +9,29 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--Import brand new Font Awesome v5-->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<!--Acknowledge browser that we are using jQuery library-->
+		<script src="jquery-3.3.1.min.js"></script>
 	</head>
 	<body class="grey lighten-2">
-		<div class="container center-align">
-			<h1 class="blue-text">Jokes about Chuck Norris</h1>
-			<button class="btn btn-large blue white-text darken-3" id="get-joke">Random joke</button>
-			<br></br>
-			<p class="blue-text" id="joke"></p>
+		<main>
+			<div class="container center-align">
+				<header>
+					<h4>Random quote machine</h4>
+				</header>
+				<div class="box">
+					<h2 class="quote"></h2>
+					<h3 class="author"></h3>
+				</div>
+				<div class="row">
+					<button class="trigger waves-effect waves-light btn-flat indigo darken-4 white-text btn-large"> Random quote </button>
+				</div>
+				<div class="row">
+					<a href="#" target="_blank" class="tweet"><i class="fab fa-twitter fa-3x"></i>Tweet</a>
+				</div>
 			</div>
-
-		<!--Import jQuery before materialize.js-->
+		</main>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
